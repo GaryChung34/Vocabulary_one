@@ -1,2 +1,5 @@
 # Vocabulary_one
-A tool to help memorizing English vocabulary.
+A command line based tool to help memorizing English vocabulary.
+
+# My idea
+
