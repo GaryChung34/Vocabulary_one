@@ -1,0 +1,12 @@
+Vocab_one app todo list.
+
+28/6/2021  == to enhance sustainable ==
+1. get all length database
+2. select database file to open
+3. divide layer structure
+  - book layer
+  - chapter layer
+  - passage layer
+4. finish passage layer first
+
+
