@@ -45,9 +45,9 @@ public:
 		string c_name = temp[n-1];
 
 		head = search(c_name) + 1;                      // the first word element number.
-    cout << head << endl;
-		scope = search(c_name + "_end") - head;         // number of word in chapter.
-    cout << scope;
+	    cout << head << endl;
+			scope = search(c_name + "_end") - head;         // number of word in chapter.
+	    cout << scope;
 	}
 
 	void order_vertical() 
@@ -121,26 +121,9 @@ public:
 
 	// using in searchChapter() only
 	void displayList() {
-		//cout << "displayList()" << endl;
 		int i;
 		string withNum;				// string of word including item number at the begining
 		int display_column = 3;		// number of column that the list display
-
-		/*
-		// By horizontal orders
-		for (i = 0; i < s; i++) {
-			withNum = to_string(i+1) + "." + dataBase[h+i];
-
-			cout << left << setw(35) << withNum;
-			if ((i+1) % 3 == 0)
-				cout << endl;
-		}
-		*/
-
-		// By vertical orders
-		// switch loop is to deside the display method of different scope.
-		//cout << head << endl;
-		//cout << scope << endl;
 
 		switch (scope % 3) {
 			case 1:
@@ -177,26 +160,10 @@ public:
 	}
     
     void displayListRandom() {
-		//cout << "displayList()" << endl;
 		int i;
 		string withNum;				// string of word including item number at the begining
 		int display_column = 3;		// number of column that the list display
 
-		/*
-		// By horizontal orders
-		for (i = 0; i < s; i++) {
-			withNum = to_string(i+1) + "." + dataBase[h+i];
-
-			cout << left << setw(35) << withNum;
-			if ((i+1) % 3 == 0)
-				cout << endl;
-		}
-		*/
-
-		// By vertical orders
-		// switch loop is to deside the display method of different scope.
-		//cout << head << endl;
-		//cout << scope << endl;
 
 		switch (scope % 3) {
 			case 1:
@@ -207,8 +174,8 @@ public:
 					if (i >= scope - 4) {
 						if (i == scope-1 || i == scope-3)
 							cout << endl;
-
-					} else {
+					} 
+					else {
 						if ((i+1) % 3 == 0) {
 							cout << endl;
 						}
@@ -233,14 +200,14 @@ public:
 	}
 
 	void instruction() {
-    cout << "Ch1 - My grandmother\n\n";
+    	cout << "Ch1 - My grandmother\n\n";
 		cout << "Passage 1 - Norwegian parents accident.\n";
 		cout << "Passage 2 - Five children story.\n";
 		cout << "Passage 3 - Point number 1 and 2.\n";
-    cout << "Passage 4 - Point number 3 and 4.\n";
-    cout << "Passage 5 - Back to England.\n";
-    cout << "Passage 6 - Tree house issue.\n";
-    cout << "Passage 7 - Summer hoilday.\n";
+	    cout << "Passage 4 - Point number 3 and 4.\n";
+	    cout << "Passage 5 - Back to England.\n";
+	    cout << "Passage 6 - Tree house issue.\n";
+	    cout << "Passage 7 - Summer hoilday.\n";
 		cout << "?";
 		cin >> page;
 	}
@@ -301,35 +268,11 @@ int main() {
 	
 	Dictionary myDictionary;
 	myDictionary.getdataBase();
-	//myDictionary.testSearch();
 
 	cout << "\n==== Welcome to Vocab One program. ====" << endl;
 
 	while (1) {
 		myDictionary.instruction();
 		myDictionary.pageElon();
-		/*
-		switch (myDictionary.getPage()) {
-			case 1:
-				myDictionary.pageElon();
-				break;
-
-			case 2:
-				myDictionary.searchChapter(2);
-				myDictionary.order_vertical();
-				cout << "\n=== Sherlock Holmes vocabulary list: ===\n" << endl;
-				myDictionary.displayList();
-				break;
-
-			case 3:
-				myDictionary.pageElon();
-				break;
-
-			case 4:
-				myDictionary.pageElon();
-				break;
-		*/
-		
 	}
-  // cout << dataBase[120];
 }
