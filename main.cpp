@@ -258,6 +258,13 @@ public:
 		cout << "back to main menu.\n" << endl;
 	}
 
+	//book
+
+	//chapter
+
+	//scene
+
+
 private:
 	int page;
 	int scope;
@@ -274,5 +281,10 @@ int main() {
 	while (1) {
 		myDictionary.instruction();
 		myDictionary.pageElon();
+
+		//myDictionary.selectBook()
+		//myDictionary.selectChapter()
+		//myDictionary.selectScene()
+		//myDictionary.showWordList()
 	}
 }
